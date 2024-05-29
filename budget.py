@@ -1,37 +1,29 @@
-import pandas as pd
-import matplotlib.pyplot as plt
+def calculate_savings(monthly_income, monthly_expenses):
+    savings = monthly_income - monthly_expenses
+    return savings
 
+def calculate_monthly_budget(monthly_income, monthly_expenses):
+    budget = {
+        "income": monthly_income,
+        "expenses": monthly_expenses,
+        "savings": calculate_savings(monthly_income, monthly_expenses)
+    }
+    return budget
 
-def track_weight():
-    # Initialize an empty list to store weight data
-    weight_entries = []
+def main():
+    try:
+        monthly_income = float(input("Enter your monthly income: $"))
+        monthly_expenses = float(input("Enter your monthly expenses: $"))
 
-    # Loop to input weight data
-    while True:
-        date = input("Enter date (YYYY-MM-DD) or 'done' to finish: ")
-        if date.lower() == 'done':
-            break
-        weight = float(input("Enter weight (in kg): "))
-        weight_entries.append({'Date': date, 'Weight': weight})
+        monthly_budget = calculate_monthly_budget(monthly_income, monthly_expenses)
 
-    # Convert the list of dictionaries to a DataFrame
-    weight_data = pd.DataFrame(weight_entries)
+        print("\nYour monthly budget details:")
+        print("Income: ${}".format(monthly_budget['income']))
+        print("Expenses: ${}".format(monthly_budget['expenses']))
+        print("Savings: ${}".format(monthly_budget['savings']))
 
-    # Convert the 'Date' column to datetime format
-    weight_data['Date'] = pd.to_datetime(weight_data['Date'])
-
-    # Plot the data
-    plt.figure(figsize=(10, 6))
-    plt.plot(weight_data['Date'], weight_data['Weight'], marker='o', linestyle='-')
-    plt.title('Weight Tracking')
-    plt.xlabel('Date')
-    plt.ylabel('Weight (kg)')
-    plt.grid(True)
-    plt.tight_layout()
-    plt.show()
-
+    except ValueError:
+        print("Please enter a valid number.")
 
 if __name__ == "__main__":
-    track_weight()
-
-
+    main()
