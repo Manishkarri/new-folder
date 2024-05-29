@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
+
 # Function to add a task
 def add_task():
     task = task_entry.get()
@@ -10,6 +11,7 @@ def add_task():
     else:
         messagebox.showwarning("Warning", "You must enter a task.")
 
+
 # Function to remove the selected task
 def remove_task():
     try:
@@ -18,6 +20,7 @@ def remove_task():
     except IndexError:
         messagebox.showwarning("Warning", "You must select a task to remove.")
 
+
 # Function to save tasks to a file
 def save_tasks():
     tasks = task_listbox.get(0, tk.END)
@@ -25,6 +28,7 @@ def save_tasks():
         for task in tasks:
             file.write(task + "\n")
     messagebox.showinfo("Info", "Tasks saved successfully.")
+
 
 # Function to load tasks from a file
 def load_tasks():
@@ -35,6 +39,7 @@ def load_tasks():
                 task_listbox.insert(tk.END, task.strip())
     except FileNotFoundError:
         messagebox.showwarning("Warning", "No saved tasks found.")
+
 
 # Setting up the main application window
 root = tk.Tk()
