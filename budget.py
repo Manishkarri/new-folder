@@ -2,6 +2,7 @@ def calculate_savings(monthly_income, monthly_expenses):
     savings = monthly_income - monthly_expenses
     return savings
 
+
 def calculate_monthly_budget(monthly_income, monthly_expenses):
     budget = {
         "income": monthly_income,
@@ -9,6 +10,7 @@ def calculate_monthly_budget(monthly_income, monthly_expenses):
         "savings": calculate_savings(monthly_income, monthly_expenses)
     }
     return budget
+
 
 def main():
     try:
@@ -24,6 +26,7 @@ def main():
 
     except ValueError:
         print("Please enter a valid number.")
+
 
 if __name__ == "__main__":
     main()
