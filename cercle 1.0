@@ -1,0 +1,26 @@
+SELECT: Used to retrieve data from one or more tables.
+INSERT: Adds new rows of data to a table.
+UPDATE: Modifies existing data in a table.
+DELETE: Removes rows from a table.
+CREATE TABLE: Creates a new table in the database.
+ALTER TABLE: Modifies an existing table structure.
+DROP TABLE: Deletes a table and all of its data from the database.
+CREATE INDEX: Creates an index on a table column to improve query performance.
+DROP INDEX: Removes an index from a table.
+JOIN: Combines rows from two or more tables based on a related column between them.
+GROUP BY: Groups rows that have the same values into summary rows.
+HAVING: Specifies a search condition for a group or an aggregate function used in conjunction with the GROUP BY clause.
+ORDER BY: Sorts the result set in ascending or descending order.
+DISTINCT: Filters out duplicate values in the result set.
+WHERE: Filters records based on specified conditions.
+LIMIT: Limits the number of records returned in a query result.
+OFFSET: Specifies the starting point for returning rows from a result set.
+CASE: Evaluates a list of conditions and returns one of multiple possible result expressions.
+UNION: Combines the result sets of two or more SELECT statements into a single result set.
+UNION ALL: Similar to UNION but includes duplicate rows.
+SUBQUERIES: Queries nested within another query.
+CTE (Common Table Expressions): Defines temporary result sets that can be referenced within a SELECT, INSERT, UPDATE, or DELETE statement.
+Window Functions: Analytic functions that perform calculations across a set of rows related to the current row.
+TRUNCATE TABLE: Removes all rows from a table without logging the individual row deletions.
+GRANT: Provides specific privileges to database users.
+REVOKE: Removes privileges from database users.
