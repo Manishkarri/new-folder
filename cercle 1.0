@@ -57,3 +57,5 @@ Amazon Neptune: A fully managed graph database service provided by AWS, compatib
 Time-Series Databases
 InfluxDB: An open-source time series database designed to handle high write and query loads.
 Prometheus: A systems monitoring and alerting toolkit with built-in time series database capabilities, widely used in cloud-native environments.
+
+pooka , lanja , sulli 
