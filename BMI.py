@@ -26,3 +26,4 @@ try:
     print(f"Your BMI is {bmi:.2f}")
 except ValueError:
     print("Please enter valid numeric values for weight and height.")
+
